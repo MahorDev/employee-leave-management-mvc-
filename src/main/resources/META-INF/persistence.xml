@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.2">
+
+    <persistence-unit name="leavePU">
+
+        <provider>
+            org.hibernate.jpa.HibernatePersistenceProvider
+        </provider>
+
+        <class>com.tekpy.leave.entity.Employee</class>
+        <class>com.tekpy.leave.entity.LeaveRequest</class>
+
+        <properties>
+
+            <property
+                    name="jakarta.persistence.jdbc.driver"
+                    value="com.mysql.cj.jdbc.Driver"/>
+
+            <property
+                    name="jakarta.persistence.jdbc.url"
+                    value="jdbc:mysql://localhost:3306/employeeLeave?useSSL=false&amp;serverTimezone=UTC"/>
+
+            <property
+                    name="jakarta.persistence.jdbc.user"
+                    value="root"/>
+
+            <property
+                    name="jakarta.persistence.jdbc.password"
+                    value="admin"/>
+
+            <property
+                    name="hibernate.hbm2ddl.auto"
+                    value="update"/>
+
+            <property
+                    name="hibernate.show_sql"
+                    value="true"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
